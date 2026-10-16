@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS for modern styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- PyScript CSS and Core -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/39/8d/73/398d732701eb854945885d25dc426d3c.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(66, 43, 2);
+            padding-bottom: 40px;
+        }
+
+        #whitelist {
+            background-color: chocolate;
+            max-width: 567px;
+            margin-top: 39px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: #c8842c !important;
+            border: none !important;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        button:hover {
+            background-color: #b07224 !important;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .card-custom {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            color: rgb(66, 43, 2);
+        }
+    </style>
+   
+    <title>Basketball Varsity Club Manager</title>
+</head>
+<body>
+
+<div class="container text-center mt-4">
+    <h2 class="mb-3 fw-bold shadow-sm p-2 bg-white rounded d-inline-block px-4">Basketball Varsity Team</h2>
+
+    <div class="container p-4 mx-auto" id="whitelist">
+        <input type="text" id="firstname" class="form-control mx-auto" placeholder="Enter first name...">
+        <input type="text" id="lastname" class="form-control mx-auto" placeholder="Enter last name...">
+        <button class="btn btn-primary" py-click="add_member">Add Member & Update</button>
+    </div>
+
+    <div class="container mt-4" style="max-width: 600px;">
+        <div id="members_box" class="card-custom shadow"></div>
+    </div>
+</div>
+
+<script type="py" src="main.py"></script>
+</body>
+</html>
